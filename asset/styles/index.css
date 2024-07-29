@@ -1,0 +1,32 @@
+:root {
+    --main-color: #194C9B;
+    --second-color: #17B6DE;
+    --dark-color: #1A3154;
+    --card-color: #F7FAFE;
+    --bg-color: #DFEAFC;
+    --white-color: #FFF;
+    --font-color: #62636C;
+    --border-color: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+    font-family: "Cairo";
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.section {
+    padding: 1rem 5%;
+}
+
+/* hero section */
+.hero {
+    height: 100vh;
+    background-image: url('../images/Home.png');
+    background-size: cover;
+    background-position: center;
+}
