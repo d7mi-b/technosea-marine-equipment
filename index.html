@@ -56,6 +56,7 @@
             </section>
         </section>
 
+        <!-- Engine Section -->
         <section class="engine">
             <section>
                 <p>
@@ -65,10 +66,59 @@
             </section>
         </section>
 
+        <!-- Services Section -->
+        <section id="services" class="section services">
+            <header>
+                <h2>الخدمات</h2>
+                <p>نقدم مجموعة متكاملة من الخدمات البحرية لضمان تلبية جميع احتياجاتك</p>
+            </header>
+
+            <section class="services-container"></section>
+        </section>
+
         <script type="module">
             import Navbar from './components/navbar.js';
 
             Navbar();
+
+            const services = [
+                {
+                    id: 1,
+                    title: "بيع المعدات البحرية",
+                    description: "مجموعة واسعة من محركات القوارب، الأدوات، والملحقات البحرية من أفضل العلامات التجارية.",
+                    icon: "fi-ts-sailboat"
+                },
+                {
+                    id: 2,
+                    title: "الاستشارات الفنية",
+                    description: "فريق من الخبراء لتقديم المشورة التقنية ومساعدتك في اختيار المعدات الأنسب لاحتياجاتك",
+                    icon: "fi-ts-employee-man-alt"
+                },
+                {
+                    id: 3,
+                    title: "خدمة العملاء",
+                    description: "دعم فني على مدار الساعة للإجابة على استفساراتك وتقديم المساعدة اللازمة في أي وقت",
+                    icon: "fi-ts-user-headset"
+                },
+            ];
+
+            const servicesContainer = document.getElementsByClassName('services-container')[0];
+
+            services.forEach(e => {
+                servicesContainer.innerHTML += `
+                    <article class="card">
+                        <section class="icon center">
+                            <i class="fi ${e.icon}"></i>
+                        </section>
+
+                        <header>
+                            <h3>${e.title}</h3>
+                        </header>
+
+                        <p>${e.description}</p>
+                    </article>
+                `;
+            })
         </script>
     </body>
 </html>

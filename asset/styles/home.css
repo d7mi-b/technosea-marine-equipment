@@ -6,7 +6,7 @@
     background-position: center;
     color: var(--white-color);
     animation-name: bg-anomation;
-    animation-duration: 7s;
+    animation-duration: 30s;
     animation-fill-mode: backwards;
     animation-iteration-count: infinite;
 }
@@ -107,6 +107,7 @@
 
 .about > article h2 {
     font-size: 3rem;
+    margin: unset;
 }
 
 .about > section:last-child {
@@ -148,7 +149,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 70vh;
+    min-height: 30rem;
     color: var(--white-color);
     display: flex;
     align-items: center;
@@ -190,5 +191,28 @@
     .engine > section {
         width: 100%;
         text-align: justify;
+    }
+}
+
+/* Services */
+.services {
+    margin: 1.5rem 0;
+}
+
+.services header {
+    text-align: center;
+}
+
+.services .services-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 992px) {
+    .services .services-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
