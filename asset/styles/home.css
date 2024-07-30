@@ -95,6 +95,8 @@
 .about > article {
     width: 60%;
     padding: 1rem 5%;
+    position: relative;
+    z-index: 10;
 }
 
 .about > article > p {
@@ -136,5 +138,57 @@
     .about > section:last-child {
         position: absolute;
         width: 100%;
+    }
+}
+
+/* Engine */
+.engine {
+    position: relative;
+    background-image: url('../images/Frame\ 3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+}
+
+.engine::before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(-90deg, var(--main-color) 75%, transparent);
+}
+
+.engine > section {
+    padding: 1rem 5%;
+    z-index: 10;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 60%;
+}
+
+.engine > section > p {
+    margin-bottom: 1rem;
+}
+
+.engine > section .btn {
+    background-color: var(--white-color);
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+.engine > section .btn:hover {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+
+@media (max-width: 992px) {
+    .engine > section {
+        width: 100%;
+        text-align: justify;
     }
 }

@@ -72,6 +72,7 @@ i {
     border-radius: .5rem;
     background-color: var(--main-color);
     color: var(--white-color);
+    font-weight: 500;
 }
 
 .btn-linear {
