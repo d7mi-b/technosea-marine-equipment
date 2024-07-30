@@ -1,0 +1,140 @@
+/* hero section */
+.hero {
+    height: 100vh;
+    background-image: url('../images/Home.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+    animation-name: bg-anomation;
+    animation-duration: 7s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}
+
+.hero header h1,
+.hero header h2 {
+    background: linear-gradient(to left, var(--white-color), var(--card-color) 20%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.hero header h1 {
+    font-size: 4rem;
+}
+
+.hero header h2 {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.hero section:last-child {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 2rem;
+}
+
+@keyframes bg-anomation {
+    0% {
+        background-position: center center;
+    }
+
+    25% {
+        background-position: 1px .1px;
+    }
+
+    50% {
+        background-position: center center;
+    }
+
+    75% {
+        background-position: -1px -.1px;
+    }
+
+    100% {
+        background-position: center center;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        animation: none;
+    }
+
+    .hero header h1 {
+        font-size: 3rem;
+    }
+    
+    .hero header h2 {
+        font-weight: 500;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero header h1 {
+        font-size: 2rem;
+    }
+    
+    .hero header h2 {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+}
+
+/* About */
+.about {
+    position: relative;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+.about > article {
+    width: 60%;
+    padding: 1rem 5%;
+}
+
+.about > article > p {
+    font-size: 1.5rem;
+    margin: .5rem 0 1.5rem;
+    text-align: justify;
+}
+
+.about > article h2 {
+    font-size: 3rem;
+}
+
+.about > section:last-child {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about > section:last-child img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* @media (max-width: 992px) {
+    .about > article {
+        width: 100%;
+    }
+
+    .about > section:last-child {
+        width: 50%;
+    }
+} */
+
+@media (max-width: 992px) {
+    .about > article {
+        width: 100%;
+    }
+
+    .about > section:last-child {
+        position: absolute;
+        width: 100%;
+    }
+}
