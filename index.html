@@ -19,41 +19,10 @@
     </head>
 
     <body>
-        <header>
-            <nav class="navbar">
-                <section class="logo center non-responsive">
-                    <img src="/public/logo.jpg" alt="logo">
-                </section>
+        <!-- for the navbar -->
+        <header></header>
 
-                <ul>
-                    <li class="center bar responsive">
-                        <i class="fi fi-ts-bars-staggered"></i>
-                    </li>
-                    <li class="logo center responsive">
-                        <img src="/public/logo.jpg" alt="logo">
-                    </li>
-                    <ul>
-                        <li>
-                            <a href="/">الرئيسية</a>
-                        </li>
-                        <li>
-                            <a href="/pages/about">من نحن؟</a>
-                        </li>
-                        <li>
-                            <a href="/#services">الخدمات</a>
-                        </li>
-                        <li>
-                            <a href="/pages/products">المنتجات</a>
-                        </li>
-                    </ul>
-                </ul>
-
-                <section>
-                    <a class="center btn btn-linear" href="/pages/contact">تواصل معنا</a>
-                </section>
-            </nav>
-        </header>
-
+        <!-- Hero Section -->
         <section class="section hero center">
             <header>
                 <h1>تكنوسي للمعدات البحرية</h1>
@@ -64,5 +33,32 @@
                 <i class="fi fi-ts-angle-small-down"></i>
             </section>
         </section>
+
+        <!-- About Section -->
+        <section class="section about">
+            <article>
+                <header>
+                    <h2>من نحن؟</h2>
+                </header>
+
+                <p>
+                    ملتزمون بتوفير أفضل المعدات البحرية لتلبية احتياجاتك سواء كنت محترفًا أو هاويًا. نهدف إلى ضمان رحلاتك البحرية بأمان ومتعة من خلال منتجات عالية الجودة وخدمة عملاء متميزة.
+                </p>
+
+                <section>
+                    <a href="/about" class="btn btn-linear">اكتشف من نحن؟</a>
+                </section>
+            </article>
+
+            <section>
+                <img src="./asset/images/diver-1.png" alt="Diver">
+            </section>
+        </section>
+
+        <script type="module">
+            import Navbar from './components/navbar.js';
+
+            Navbar();
+        </script>
     </body>
 </html>
