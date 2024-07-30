@@ -19,8 +19,161 @@
     -webkit-box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+a:hover {
+    color: var(--second-color);
+}
+
+img {
+    width: 100%;
+}
+
+i {
+    line-height: 0;
+}
+
 .section {
     padding: 1rem 5%;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+}
+
+.logo {
+    width: 3rem;
+}
+
+.btn {
+    height: 3rem;
+    min-width: 10rem;
+    padding: .5rem 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+.btn-linear {
+    background-image: linear-gradient(-45deg, var(--main-color), var(--second-color));
+}
+
+.btn-linear:hover {
+    background-image: linear-gradient(45deg, var(--main-color), var(--second-color));
+    color: var(--white-color);
+}
+
+.responsive {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .responsive {
+        display: unset;
+    }
+
+    .center.responsive {
+        display: flex;
+    }
+
+    .non-responsive {
+        display: none;
+    }
+}
+
+/* Navbar */
+body > header:first-child {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+.navbar {
+    padding: 1rem 2rem;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar .bar {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.navbar .bar:hover {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--second-color);
+}
+
+@media (max-width: 992px) {
+    .navbar > ul > ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 1rem;
+        padding: 2rem 3rem;
+        background-color: var(--white-color);
+        border-radius: 0 0 .5rem .5rem;
+        height: 0;
+        /* display: none; */
+        opacity: 0;
+        animation-name: navbar-responsive-close;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+    }
+
+    .navbar > ul:hover > ul {
+        display: flex;
+        animation-name: navbar-responsive;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes navbar-responsive {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 15rem;
+        opacity: 1;
+    }
+}
+
+@keyframes navbar-responsive-close {
+    from {
+        height: 13rem;
+        opacity: 1;
+    }
+
+    to {
+        height: 0;
+        opacity: 0;
+    }
 }
 
 /* hero section */
@@ -29,4 +182,72 @@
     background-image: url('../images/Home.png');
     background-size: cover;
     background-position: center;
+    color: var(--white-color);
+    animation-name: bg-anomation;
+    animation-duration: 7s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}
+
+.hero header h1 {
+    font-size: 4rem;
+}
+
+.hero header h2 {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.hero section:last-child {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 2rem;
+}
+
+@keyframes bg-anomation {
+    0% {
+        background-position: center center;
+    }
+
+    25% {
+        background-position: 1px .1px;
+    }
+
+    50% {
+        background-position: center center;
+    }
+
+    75% {
+        background-position: -1px -.1px;
+    }
+
+    100% {
+        background-position: center center;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        animation: none;
+    }
+
+    .hero header h1 {
+        font-size: 3rem;
+    }
+    
+    .hero header h2 {
+        font-weight: 500;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero header h1 {
+        font-size: 2rem;
+    }
+    
+    .hero header h2 {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
 }
