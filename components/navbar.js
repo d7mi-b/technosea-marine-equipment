@@ -4,7 +4,7 @@ const Navbar = () => {
     const navbar = `
         <nav class="navbar">
             <section class="logo center non-responsive">
-                <img src="/public/logo.jpg" alt="logo">
+                <img src="/public/logo.png" alt="logo">
             </section>
 
             <ul>
@@ -12,7 +12,7 @@ const Navbar = () => {
                     <i class="fi fi-ts-bars-staggered"></i>
                 </li>
                 <li class="logo center responsive">
-                    <img src="/public/logo.jpg" alt="logo">
+                    <img src="/public/logo.png" alt="logo">
                 </li>
                 <ul>
                     <li>
