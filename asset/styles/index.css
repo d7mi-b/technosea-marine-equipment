@@ -2,11 +2,12 @@
     --main-color: #194C9B;
     --second-color: #17B6DE;
     --dark-color: #1A3154;
-    --card-color: #F7FAFE;
+    --card-color: #fcfdff;
     --bg-color: #DFEAFC;
     --white-color: #FFF;
     --font-color: #62636C;
     --border-color: #ddd;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 * {
@@ -25,7 +26,23 @@ html {
 
 body {
     color: var(--font-color);
-    background-image: linear-gradient(45deg, var(--bg-color), var(--white-color));
+    background-image: linear-gradient(30deg, var(--bg-color), var(--white-color), var(--main-color), var(--bg-color), var(--white-color), var(--main-color), var(--white-color));
+    min-height: 100vh;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 header > h1,
@@ -131,7 +148,7 @@ i {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    box-shadow: 0 3px 5px 2px rgba(153, 153, 153, .3);
+    box-shadow: var(--shadow);
 }
 
 .card .image {
@@ -141,7 +158,9 @@ i {
 }
 
 .card .image img {
-    width: 9rem;
+    /* width: 9rem; */
+    object-fit: contain;
+    height: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -154,9 +173,9 @@ i {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--dark-color);
+    background-color: var(--main-color);
     border-radius: .5rem .5rem 0 0;
-    opacity: .2;
+    opacity: .1;
 }
 
 .card .icon {
@@ -199,7 +218,7 @@ body > header:first-child {
     justify-content: space-between;
     align-items: center;
     border-radius: .5rem;
-    box-shadow: 0 3px 5px 2px rgba(153, 153, 153, .3);
+    box-shadow: var(--shadow);
 }
 
 .navbar ul {

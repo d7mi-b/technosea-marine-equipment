@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Icons -->
-        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
-
-        <!-- Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
-
-        <!-- Style -->
-        <link rel="stylesheet" href="./asset/styles/index.css">
+        
         <link rel="stylesheet" href="./asset/styles/home.css">
 
         <title>تكنوسي</title>
@@ -47,7 +35,7 @@
                 </p>
 
                 <section>
-                    <a href="/about" class="btn btn-linear">اكتشف من نحن؟</a>
+                    <a href="/pages/about.html" class="btn btn-linear">اكتشف من نحن؟</a>
                 </section>
             </article>
 
@@ -62,7 +50,7 @@
                 <p>
                     اكتشف قوة وكفاءة محركات القوارب لدينا في تكنوسي حيث الأداء الفائق يلتقي بالاعتمادية العالية لضمان تجربة بحرية ناجحة
                 </p>
-                <a class="btn" href="/pages/contact">أطلب محركك الأن</a>
+                <a class="btn" href="/pages/contact-us.html">أطلب محركك الأن</a>
             </section>
         </section>
 
@@ -83,7 +71,7 @@
                     نحن ملتزمون بتقديم خدمات عالية الجودة لتضمن لك تجربة بحرية مميزة وآمنة. انضم إلينا ودعنا نكون شريكك الموثوق في كل مغامرة بحرية.
                 </p>
 
-                <a href="/pages/contact" class="btn center">تواصل معنا</a>
+                <a href="/pages/contact-us.html" class="btn center">تواصل معنا</a>
             </section>
         </section>
 
@@ -128,153 +116,33 @@
             </section>
         </section>
 
-        <script type="module">
-            import Navbar from './components/navbar.js';
+        <!-- FAQ -->
+        <section class="section faq">
+            <header>
+                <h2>الاسئلة الشائعة</h2>
+                <p>لديك أسئلة؟ نحن هنا للإجابة عليها</p>
+            </header>
 
-            Navbar();
+            <section class="faq-container">
+                <!-- <article class="card">
+                    <header>
+                        <h4>كيف يمكنني تتبع طلبي؟</h4>
 
-            const services = [
-                {
-                    id: 1,
-                    title: "بيع المعدات البحرية",
-                    description: "مجموعة واسعة من محركات القوارب، الأدوات، والملحقات البحرية من أفضل العلامات التجارية.",
-                    icon: "fi-ts-sailboat"
-                },
-                {
-                    id: 2,
-                    title: "الاستشارات الفنية",
-                    description: "فريق من الخبراء لتقديم المشورة التقنية ومساعدتك في اختيار المعدات الأنسب لاحتياجاتك",
-                    icon: "fi-ts-employee-man-alt"
-                },
-                {
-                    id: 3,
-                    title: "خدمة العملاء",
-                    description: "دعم فني على مدار الساعة للإجابة على استفساراتك وتقديم المساعدة اللازمة في أي وقت",
-                    icon: "fi-ts-user-headset"
-                },
-            ];
-
-            const servicesContainer = document.getElementsByClassName('services-container')[0];
-
-            services.forEach(e => {
-                servicesContainer.innerHTML += `
-                    <article class="card">
-                        <section class="icon center">
-                            <i class="fi ${e.icon}"></i>
+                        <section>
+                            <i class="fi fi-rr-plus"></i>
                         </section>
+                    </header>
 
-                        <header>
-                            <h3>${e.title}</h3>
-                        </header>
+                    <p>
+                        يمكنك تتبع طلبك من خلال حسابك على موقعنا أو عبر البريد الإلكتروني الذي يتضمن رقم التتبع.
+                    </p>
+                </article> -->
+            </section>
+        </section>
 
-                        <p>${e.description}</p>
-                    </article>
-                `;
-            });
+        <footer ></footer>
 
-            const products = [
-                {
-                    id: 1,
-                    name: "محرك قوارب",
-                    description: "محرك قوارب مصمم لتقديم الأداء الأمثل مع توفير الوقود والاعتمادية",
-                    image: "/asset/images/product-1.jpeg"
-                },
-                {
-                    id: 2,
-                    name: "محرك قوارب",
-                    description: "محرك قوارب مصمم لتقديم الأداء الأمثل مع توفير الوقود والاعتمادية",
-                    image: "/asset/images/product-2.jpeg"
-                },
-                {
-                    id: 3,
-                    name: "محرك قوارب",
-                    description: "محرك قوارب مصمم لتقديم الأداء الأمثل مع توفير الوقود والاعتمادية",
-                    image: "/asset/images/product-1.jpeg"
-                },
-                {
-                    id: 4,
-                    name: "محرك قوارب",
-                    description: "محرك قوارب مصمم لتقديم الأداء الأمثل مع توفير الوقود والاعتمادية",
-                    image: "/asset/images/product-3.jpeg"
-                }
-            ];
-
-            const productsContainer = document.getElementsByClassName('products-container')[0];
-
-            products.forEach(e => {
-                productsContainer.innerHTML += `
-                    <article class="card product">
-                        <section class="image center">
-                            <img src="${e.image}" alt="product">
-                        </section>
-
-                        <header>
-                            <h3>${e.name}</h3>
-                        </header>
-
-                        <p>${e.description}</p>
-                    </article>
-                `;
-            });
-
-            const partners = [
-                {
-                    id: 1,
-                    name: "أويلي لمعدات السلامة ومكافحة الحرائق",
-                    image: "/asset/images/partner.png"
-                },
-                {
-                    id: 2,
-                    name: "أويلي لمعدات السلامة ومكافحة الحرائق",
-                    image: "/asset/images/partner.png"
-                },
-                {
-                    id: 3,
-                    name: "أويلي لمعدات السلامة ومكافحة الحرائق",
-                    image: "/asset/images/partner.png"
-                },
-                {
-                    id: 4,
-                    name: "أويلي لمعدات السلامة ومكافحة الحرائق",
-                    image: "/asset/images/partner.png"
-                },
-                {
-                    id: 5,
-                    name: "أويلي لمعدات السلامة ومكافحة الحرائق",
-                    image: "/asset/images/partner.png"
-                },
-                {
-                    id: 6,
-                    name: "أويلي لمعدات السلامة ومكافحة الحرائق",
-                    image: "/asset/images/partner.png"
-                },
-                {
-                    id: 7,
-                    name: "أويلي لمعدات السلامة ومكافحة الحرائق",
-                    image: "/asset/images/partner.png"
-                },
-                {
-                    id: 8,
-                    name: "أويلي لمعدات السلامة ومكافحة الحرائق",
-                    image: "/asset/images/partner.png"
-                },
-                {
-                    id: 9,
-                    name: "أويلي لمعدات السلامة ومكافحة الحرائق",
-                    image: "/asset/images/partner.png"
-                },
-            ];
-
-            const partnersContainer = document.getElementsByClassName('partners-container')[0];
-
-            partners.forEach(e => {
-                partnersContainer.innerHTML += `
-                    <section class="partner center" title="${e.name}">
-                        <img src="${e.image}" alt="partner">
-                    </section>
-                `;
-            })
-            
-        </script>
+        <script type="module" src="/asset/js/index.js"></script>
+        <script src="/asset/js/home.js"></script>
     </body>
 </html>

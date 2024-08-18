@@ -212,7 +212,7 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
 }
 
 @media (max-width: 992px) {
@@ -233,7 +233,7 @@
     gap: 1rem;
     text-align: unset;
     background-color: var(--bg-color);
-    box-shadow: 0 3px 3px 3px var(--border-color);
+    box-shadow: var(--shadow);
     margin-top: 5rem;
     margin-bottom: 2rem;
     position: relative;
@@ -313,6 +313,7 @@
 /* Partners */
 .partners {
     overflow: hidden;
+    margin-top: 3rem;
 }
 
 .partners-container {
@@ -333,7 +334,7 @@
     width: 16rem;
     height: 8.25rem;
     border-radius: .5rem;
-    box-shadow: 0 3px 5px 2px rgba(153, 153, 153, .3);
+    box-shadow: var(--shadow);
 }
 
 .partners-container .partner img {
@@ -354,5 +355,99 @@
 
     100% {
         transform: translateX(-100%);
+    }
+}
+
+/* FAQ */
+.faq {
+    margin-top: 3rem;
+}
+
+.faq .faq-container {
+    margin: 2rem 0;
+}
+
+.faq .faq-container .card {
+    width: 100%;
+    background-color: var(--white-color);
+    /* height: 4.5rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq .faq-container .card:hover {
+    transform: scale(1.01);
+}
+
+.faq .faq-container .card header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq .faq-container .card header h4 {
+    color: var(--main-color);
+}
+
+.faq .faq-container .card p {
+    opacity: 0;
+    position: absolute;
+    top: -1rem;
+    animation: .3s close-card linear forwards;
+}
+
+.faq .faq-container .open-card {
+    height: max-content;
+}
+
+.faq .faq-container .card .fi-rr-minus {
+    display: none;
+}
+
+.faq .faq-container .open-card .fi-rr-plus {
+    display: none;
+}
+
+.faq .faq-container .open-card .fi-rr-minus {
+    display: unset;
+}
+
+.faq .faq-container .open-card p {
+    position: relative;
+    animation: .3s open-card linear forwards;
+}
+
+@keyframes open-card {
+    from {
+        opacity: 0;
+        top: -1rem;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes close-card {
+    from {
+        opacity: 1;
+        top: 3.5rem;
+    }
+
+    to {
+        opacity: 0;
+        top: 2.5rem;
+    }
+}
+
+@media (max-width: 368px) {
+    .faq .faq-container .card p {
+        text-align: justify;
     }
 }

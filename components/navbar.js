@@ -19,19 +19,19 @@ const Navbar = () => {
                         <a href="/">الرئيسية</a>
                     </li>
                     <li>
-                        <a href="/pages/about">من نحن؟</a>
+                        <a href="/pages/about.html">من نحن؟</a>
                     </li>
                     <li>
                         <a href="/#services">الخدمات</a>
                     </li>
                     <li>
-                        <a href="/pages/products">المنتجات</a>
+                        <a href="/pages/products.html">المنتجات</a>
                     </li>
                 </ul>
             </ul>
 
             <section>
-                <a class="center btn btn-linear" href="/pages/contact">تواصل معنا</a>
+                <a class="center btn btn-linear" href="/pages/contact-us.html">تواصل معنا</a>
             </section>
         </nav>
     `;
