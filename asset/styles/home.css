@@ -10,6 +10,8 @@
     animation-fill-mode: backwards;
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
+    position: relative;
+    top: -5rem;
 }
 
 .hero header h1,
@@ -88,8 +90,8 @@
     display: flex;
     gap: .5rem;
     align-items: center;
-    height: 100vh;
-    padding: 0 5%;
+    height: 80vh;
+    padding: 0 5% 5rem;
     overflow: hidden;
 }
 
