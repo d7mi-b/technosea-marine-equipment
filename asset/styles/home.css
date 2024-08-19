@@ -453,3 +453,7 @@
         text-align: justify;
     }
 }
+
+.our-values .card{
+    background-color: var(--main-color);
+}
