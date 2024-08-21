@@ -91,6 +91,10 @@ ul {
     text-align: center;
 }
 
+.section.header-page {
+    margin-top: 3rem;
+}
+
 .center {
     display: flex;
     flex-direction: column;
