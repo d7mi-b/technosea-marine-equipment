@@ -1,16 +1,218 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
     <head>
-        <title>تكنوسي | المنتجات</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="../asset/styles/home.css">  
+      <title>تكنوسي | المنتجات</title>
     </head>
 
     <body>
         <!-- for the navbar -->
         <header></header>
 
+        <header class="my-5 pt-5">
+          <h3>المنتجات</h3>
+          <p class="text-center">نقدم مجموعة واسعة من المنتجات البحرية عالية الجودة لتلبية جميع احتياجاتك البحرية</p>
+        </header>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Side bar filter -->
+                <div class="col-3 " >
+                    <div class="filter-container d-flex justify-content-center" >
+                      <div class="card mb-4 rounded-5 shadow-sm bg-transpartnt" style="width: 18rem;">
+                        <h4>التصنيفات</h4>
+                        <div class="card-body">
+                            <div class="form-check">
+                              <input class="form-check-input float-end ms-1" type="checkbox" name="category" id="all" value="all" checked >
+                              <label class="form-check-label" for="all"> الكل </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input float-end ms-1" type="checkbox" name="category" id="engins" value="engins"  >
+                              <label class="form-check-label" for="engins"> محركات القوارب </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input float-end ms-1" type="checkbox" name="category" id="swimmingTools" value="swimmingTools"  >
+                              <label class="form-check-label" for="swimmingTools"> أدوات الغوص  </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input float-end ms-1" type="checkbox" name="category" id="Accessories" value="Accessories"  >
+                              <label class="form-check-label" for="Accessories"> كماليات </label>
+                            </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Products -->
+                <div class="col-9">
+                    <div class="product-container row gap-5 "></div>
+
+                    <!-- Pagnation -->
+                    <nav aria-label="Product Pagnation pe-5" >
+                        <ul class="pagination">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="section contact mt-5 ">
+          <section class="center">
+            <p>
+                نحن ملتزمون بتقديم خدمات عالية الجودة لتضمن لك تجربة بحرية مميزة وآمنة. انضم إلينا ودعنا نكون شريكك الموثوق في كل مغامرة بحرية.
+            </p>
+    
+            <a href="/pages/contact-us.html" class="btn center">تواصل معنا</a>
+          </section>
+        </section>
+
         <!-- for the footer -->
         <footer class="footer"></footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="module" src="/asset/js/index.js"></script>
+        <script>
+            const Products=[
+                {id:1, name:"Product 1", category:"engins"},
+                {id:2, name:"Product 2", category:"swimmingTools"},
+                {id:3, name:"Product 3", category:"Accessories"},
+                {id:4, name:"Product 4", category:"engins"},
+                {id:5, name:"Product 5", category:"engins"},
+                {id:6, name:"Product 6", category:"engins"},
+                {id:7, name:"Product 7", category:"engins"},
+                {id:8, name:"Product 8", category:"engins"},
+                {id:9, name:"Product 9", category:"engins"},
+                {id:10, name:"Product 10", category:"engins"},
+            ];
+
+            const productContainer = document.querySelector(".product-container");
+            const categoryCheckBox = document.querySelectorAll('input[name="category"]');
+            const paginationLinks = document.querySelectorAll(".page-link");
+            const itemPerPage = 6;
+            let currentPage = 1;
+
+            function displayProduct(filteredProducts) {
+              productContainer.innerHTML = '';
+
+              const start = 0;
+              const end = Math.min(itemPerPage, filteredProducts.length);
+              const productsToDisplay = filteredProducts.slice(start, end);
+
+              productsToDisplay.forEach((product) => {
+                const ProductElement = document.createElement('div');
+                ProductElement.classList.add('product', 'mb-3', 'col-12', 'col-md-5', 'col-lg-3');
+                ProductElement.innerHTML = `
+                  <div class="card" style="width: 20rem; ">
+                    <img src="../asset/images/product-1.jpeg" class="" alt="...">
+                    <div class="card-body">
+                      <header>
+                          <h3 class="card-title"> محرك قوارب</h3>
+                          <p class="card-text">محرك قوارب مصمم لتقديم الأداء الأمثل مع توفير الوقود والاعتمادية</p>
+                      </header>
+                    </div>
+                  </div>
+                `;
+                
+                productContainer.appendChild(ProductElement);
+              });
+            
+              updatePagination(filteredProducts.length);
+            }
+
+          function updatePagination(totalItems) {
+            const paginationLinks = document.querySelectorAll('.page-link');
+            const totalPages = Math.ceil(totalItems / itemPerPage);
+          
+            paginationLinks.forEach((link, index) => {
+              if (index === 0 || index === paginationLinks.length - 1) {
+                return;
+              }
+              link.textContent = index;
+              link.addEventListener('click', () => {
+                currentPage = index;
+                displayProduct(filteredProducts);
+              });
+            });
+          
+            // Update the active page link
+            paginationLinks.forEach((link, index) => {
+              if (index === currentPage) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+
+          function filterProducts() {
+            const selectedcategories = [];
+            categoryCheckBox.forEach((checkbox) => {
+              if (checkbox.checked) {
+                selectedcategories.push(checkbox.value);
+              }
+            });
+          
+            filteredProducts = Products.filter((product) => {
+              if (selectedcategories.includes('all')) {
+                return true;
+              }
+              return selectedcategories.includes(product.category);
+            });
+          
+            currentPage = 1;
+            displayProduct(filteredProducts);
+          }
+
+          categoryCheckBox.forEach((checkbox) => {
+            checkbox.addEventListener('change', filterProducts);
+          });
+
+          paginationLinks.forEach((link, index) => {
+            if (index === 0 || index === paginationLinks.length - 1) {
+              link.addEventListener('click', () => {
+                if (index === 0) {
+                  currentPage = 1;
+                } else {
+                  currentPage = Math.ceil(filteredProducts.length / itemPerPage);
+                }
+                displayProduct(filteredProducts);
+              });
+            } else {
+              link.addEventListener('click', () => {
+                currentPage = index;
+                displayProduct(filteredProducts);
+              });
+            }
+          });
+
+          filterProducts();
+            
+        </script>
     </body>
 </html>
+
+
+
+
+

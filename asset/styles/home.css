@@ -457,3 +457,13 @@
 .our-values .card{
     background-color: var(--main-color);
 }
+
+.filter-container .card{
+    /* background-color: var(--bg-color); */
+    background-color:#F5F9FF;
+    border-radius: 8px;
+}
+
+.filter-container .card:hover{
+    transform: scale(1);
+}
