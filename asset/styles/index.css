@@ -72,12 +72,18 @@ i {
     line-height: 0;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .section {
     padding: 1rem 5%;
 }
 
 .section > header > h2 {
     font-size: 3rem;
+    margin-bottom: .5rem;
 }
 
 .section > header > p {
@@ -106,6 +112,7 @@ i {
     background-color: var(--main-color);
     color: var(--white-color);
     font-weight: 500;
+    border: none;
 }
 
 .btn:hover {
@@ -144,11 +151,16 @@ i {
     background-color: var(--card-color);
     padding: 1.5rem;
     border-radius: .5rem;
-    width: 25rem;
+    width: 27rem;
     display: flex;
     flex-direction: column;
     gap: .5rem;
     box-shadow: var(--shadow);
+    border: none;
+}
+
+.card.small {
+    width: 20rem;
 }
 
 .card .image {
