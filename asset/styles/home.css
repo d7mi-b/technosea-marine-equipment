@@ -458,7 +458,7 @@
     background-color: var(--main-color);
 }
 
-.filter-container .card{
+.bg-as-body{
     /* background-color: var(--bg-color); */
     background-color:#F5F9FF;
     border-radius: 8px;
@@ -467,3 +467,13 @@
 .filter-container .card:hover{
     transform: scale(1);
 }
+
+.countact-us .card.icon {
+    background-image: linear-gradient(-90deg, var(--main-color), var(--second-color));
+    height: 11rem;
+}
+
+.text-primary{
+    color: var(--main-color);
+}
+
