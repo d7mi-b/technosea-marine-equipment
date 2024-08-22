@@ -469,24 +469,6 @@
     animation: .2s hover-card linear forwards;
 }
 
-@keyframes hover-card {
-    0% {
-        background-image: linear-gradient(-45deg, var(--main-color) 70%, var(--second-color));
-    }
-
-    25% {
-        background-image: linear-gradient(0deg, var(--main-color) 35%, var(--second-color));
-    }
-
-    50% {
-        background-image: linear-gradient(30deg, var(--main-color) 10%, var(--second-color));
-    }
-
-    100% {
-        background-image: linear-gradient(45deg, var(--main-color), var(--second-color));
-    }
-}
-
 @media (max-width: 992px) {
     .our-values > div {
         grid-template-columns: repeat(2, 1fr);
@@ -497,4 +479,9 @@
     .our-values > div {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+body > section:not(body > section.hero) {
+    transform: translate(100%);
+    opacity: 0;
 }
