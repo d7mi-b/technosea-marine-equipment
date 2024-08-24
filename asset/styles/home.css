@@ -5,11 +5,6 @@
     background-size: cover;
     background-position: center;
     color: var(--white-color);
-    animation-name: bg-anomation;
-    animation-duration: 10s;
-    animation-fill-mode: backwards;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
     position: relative;
     top: -5rem;
 }
@@ -34,27 +29,28 @@
     position: absolute;
     bottom: 1rem;
     font-size: 2rem;
+    animation: 3s move ease-out infinite;
 }
 
-@keyframes bg-anomation {
+@keyframes move {
     0% {
-        background-position: center center;
+        bottom: 1rem;
     }
 
     25% {
-        background-position: 1px .1px;
+        bottom: 1.5rem;
     }
 
     50% {
-        background-position: center center;
+        bottom: 1rem;
     }
 
     75% {
-        background-position: -1px -.1px;
+        bottom: -.7rem;
     }
 
     100% {
-        background-position: center center;
+        bottom: 1rem;
     }
 }
 
@@ -213,9 +209,15 @@
 
 .services .services-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     margin: 2rem 0;
+}
+
+.services .btn,
+.products .btn {
+    margin: 0 auto;
 }
 
 @media (max-width: 992px) {
@@ -239,8 +241,6 @@
     text-align: unset;
     background-color: var(--bg-color);
     box-shadow: var(--shadow);
-    margin-top: 5rem;
-    margin-bottom: 2rem;
     position: relative;
 }
 
@@ -281,7 +281,7 @@
 }
 
 .product {
-    /* width: 100%; */
+    width: 100%;
     padding: 0;
     padding-bottom: 1.5rem;
 }
@@ -291,7 +291,7 @@
     padding: 0 1.5rem;
 }
 
- .btn-container {
+.btn-container {
     text-align: center;
 }
 

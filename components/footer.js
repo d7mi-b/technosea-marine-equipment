@@ -26,7 +26,7 @@ const Footer = () => {
                 <ul>
                     <li><a href="/">الرئيسية</a></li>
                     <li><a href="/pages/about.html">من نحن؟</a></li>
-                    <li><a href="/#services">الخدمات</a></li>
+                    <li><a href="/pages/services.html">الخدمات</a></li>
                     <li><a href="/pages/products.html">المنتجات</a></li>
                 </ul>
             </section>

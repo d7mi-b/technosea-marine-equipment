@@ -108,15 +108,24 @@ ul {
     width: 3rem;
 }
 
+.btn-container {
+    text-align: center;
+}
+
 .btn {
-    height: 2.5rem;
+    height: 3rem;
     min-width: 10rem;
+    width: fit-content;
     padding: .5rem 1.5rem;
     border-radius: .5rem;
     background-color: var(--main-color);
     color: var(--white-color);
     font-weight: 500;
     border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn:hover {
@@ -459,6 +468,37 @@ body > header:first-child {
     .footer > .copyright {
         text-align: center;
     }
+}
+
+/* pagination */
+#pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.pagination {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.pagination li a {
+    display: flex;
+}
+
+.pagination li.active a,
+.pagination li a.active {
+    color: var(--second-color);
+}
+
+.pagination li a:hover {
+    color: var(--second-color);
+    transform: scale(1.1);
 }
 
 @keyframes hover-card {

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        
+        <meta name="description" content="وجهتك المثالية لمعدات بحرية عالية الجودة لضمان رحلتك بأمان ومتعة">
+        <meta name="keywords" content="Technosea, تكنوسي, معدات بحرية, marian, بحرية, محركات, engine">
+
+        <link rel="stylesheet" href="../asset/styles/home.css">
+        <title>تكنوسي | الخدمات</title>
+    </head>
+
+    <body>
+        <!-- for the navbar -->
+        <header></header>
+
+        <!-- Services Section -->
+        <section id="services" class="section services">
+            <header>
+                <h2>الخدمات</h2>
+                <p>نقدم مجموعة متكاملة من الخدمات البحرية لضمان تلبية جميع احتياجاتك</p>
+            </header>
+
+            <section class="services-container"></section>
+
+            <section id="pagination-container"></section>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact mt-5 ">
+            <section class="center">
+                <p>
+                    نحن ملتزمون بتقديم خدمات عالية الجودة لتضمن لك تجربة بحرية مميزة وآمنة. انضم إلينا ودعنا نكون شريكك الموثوق في كل مغامرة بحرية.
+                </p>
+        
+                <a href="/pages/contact-us.html" class="btn center">تواصل معنا</a>
+            </section>
+        </section>
+
+        <!-- for the footer -->
+        <footer class="footer"></footer>
+
+        <script type="module" src="/asset/js/index.js"></script>
+        <script type="module">
+            import Pagination from '../components/pagination.js';
+
+            const services = [
+                {
+                    id: 1,
+                    title: "بيع المعدات البحرية",
+                    description: "مجموعة واسعة من محركات القوارب، الأدوات، والملحقات البحرية من أفضل العلامات التجارية.",
+                    icon: "fi-ts-sailboat"
+                },
+                {
+                    id: 2,
+                    title: "الاستشارات الفنية",
+                    description: "فريق من الخبراء لتقديم المشورة التقنية ومساعدتك في اختيار المعدات الأنسب لاحتياجاتك",
+                    icon: "fi-ts-employee-man-alt"
+                },
+                {
+                    id: 3,
+                    title: "خدمة العملاء",
+                    description: "دعم فني على مدار الساعة للإجابة على استفساراتك وتقديم المساعدة اللازمة في أي وقت",
+                    icon: "fi-ts-user-headset"
+                },
+                {
+                    id: 4,
+                    title: "خدمة العملاء",
+                    description: "دعم فني على مدار الساعة للإجابة على استفساراتك وتقديم المساعدة اللازمة في أي وقت",
+                    icon: "fi-ts-user-headset"
+                },
+                {
+                    id: 5,
+                    title: "الاستشارات الفنية",
+                    description: "فريق من الخبراء لتقديم المشورة التقنية ومساعدتك في اختيار المعدات الأنسب لاحتياجاتك",
+                    icon: "fi-ts-employee-man-alt"
+                },
+            ];
+
+            const servicesContainer = document.getElementsByClassName('services-container')[0];
+
+            services.forEach(e => {
+                servicesContainer.innerHTML += `
+                    <article class="card">
+                        <section class="icon center">
+                            <i class="fi ${e.icon}"></i>
+                        </section>
+
+                        <header>
+                            <h3>${e.title}</h3>
+                        </header>
+
+                        <p>${e.description}</p>
+                    </article>
+                `;
+            });
+
+            const servicesSection = document.querySelector('body > section.services');
+            servicesSection.style.cssText = "animation: 1s showing-up linear forwards;";
+
+            Pagination('/pages/services.html', 5, services.length, services.length * 5);
+        </script>
+    </body>
+</html>
