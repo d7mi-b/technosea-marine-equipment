@@ -22,7 +22,7 @@ const Navbar = () => {
                         <a href="/pages/about.html">من نحن؟</a>
                     </li>
                     <li>
-                        <a href="/#services">الخدمات</a>
+                        <a href="/pages/services.html">الخدمات</a>
                     </li>
                     <li>
                         <a href="/pages/products.html">المنتجات</a>
