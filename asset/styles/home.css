@@ -241,8 +241,6 @@
     text-align: unset;
     background-color: var(--bg-color);
     box-shadow: var(--shadow);
-    margin-top: 5rem;
-    margin-bottom: 2rem;
     position: relative;
 }
 
@@ -283,7 +281,7 @@
 }
 
 .product {
-    /* width: 100%; */
+    width: 100%;
     padding: 0;
     padding-bottom: 1.5rem;
 }
@@ -293,7 +291,7 @@
     padding: 0 1.5rem;
 }
 
- .btn-container {
+.btn-container {
     text-align: center;
 }
 
