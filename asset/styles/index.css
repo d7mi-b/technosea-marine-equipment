@@ -129,7 +129,7 @@ ul {
 }
 
 .btn-linear:hover {
-    background-image: linear-gradient(45deg, var(--main-color), var(--second-color));
+    animation: .2s hover-card linear forwards;
     color: var(--white-color);
 }
 
@@ -203,6 +203,10 @@ ul {
     font-size: 2.5rem;
 }
 
+.card:hover .icon {
+    animation: .2s hover-card linear forwards;
+}
+
 .card header h3 {
     margin: unset;
     font-size: 1.5rem;
@@ -215,6 +219,12 @@ ul {
 
 .card:hover .image::before {
     opacity: 0;
+}
+
+@media (max-width: 450px) {
+    .card {
+        width: 100%;
+    }
 }
 
 /* Navbar */
@@ -448,5 +458,43 @@ body > header:first-child {
 
     .footer > .copyright {
         text-align: center;
+    }
+}
+
+@keyframes hover-card {
+    0% {
+        background-image: linear-gradient(-45deg, var(--main-color) 70%, var(--second-color));
+    }
+
+    20% {
+        background-image: linear-gradient(-30deg, var(--main-color) 35%, var(--second-color));
+    }
+
+    40% {
+        background-image: linear-gradient(0deg, var(--main-color) 10%, var(--second-color));
+    }
+
+    60% {
+        background-image: linear-gradient(20deg, var(--main-color), var(--second-color));
+    }
+    
+    80% {
+        background-image: linear-gradient(30deg, var(--main-color) 35%, var(--second-color));
+    }
+
+    100% {
+        background-image: linear-gradient(45deg, var(--main-color), var(--second-color));
+    }
+}
+
+@keyframes showing-up {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

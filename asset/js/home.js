@@ -191,4 +191,19 @@ faqs.forEach(e => {
     })
 
     faqContainer.append(article);
+});
+
+const heroSection = document.querySelector('body > section.hero');
+heroSection.style.cssText = "animation: 1s showing-up linear forwards;"
+
+const sections = document.querySelectorAll('body > section:not(body > section.hero)');
+
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const offsetTop = section.offsetTop;
+        
+        if (offsetTop < window.scrollY + 500) {
+            section.style.cssText = "animation: 1s showing-up linear forwards;"
+        }
+    })
 })

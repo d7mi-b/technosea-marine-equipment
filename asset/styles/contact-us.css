@@ -25,6 +25,10 @@
     font-size: 3rem;
 }
 
+.card:hover .icon {
+    animation: none;
+}
+
 .card header h3 {
     background: unset;
     -webkit-text-fill-color: unset;
@@ -143,31 +147,5 @@ textarea {
 
     .icons-container {
         font-size: 1.5rem;
-    }
-}
-
-@keyframes hover-card {
-    0% {
-        background-image: linear-gradient(-45deg, var(--main-color) 70%, var(--second-color));
-    }
-
-    20% {
-        background-image: linear-gradient(-30deg, var(--main-color) 35%, var(--second-color));
-    }
-
-    40% {
-        background-image: linear-gradient(0deg, var(--main-color) 10%, var(--second-color));
-    }
-
-    60% {
-        background-image: linear-gradient(20deg, var(--main-color), var(--second-color));
-    }
-    
-    80% {
-        background-image: linear-gradient(30deg, var(--main-color) 35%, var(--second-color));
-    }
-
-    100% {
-        background-image: linear-gradient(45deg, var(--main-color), var(--second-color));
     }
 }
