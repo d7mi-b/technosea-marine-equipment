@@ -130,15 +130,15 @@ const partners = [
     },
 ];
 
-const partnersContainer = document.getElementsByClassName('partners-container')[0];
+// const partnersContainer = document.getElementsByClassName('partners-container')[0];
 
-partners.forEach(e => {
-    partnersContainer.innerHTML += `
-        <section class="partner center" title="${e.name}">
-            <img src="${e.image}" alt="partner">
-        </section>
-    `;
-})
+// partners.forEach(e => {
+//     partnersContainer.innerHTML += `
+//         <section class="partner center" title="${e.name}">
+//             <img src="${e.image}" alt="partner">
+//         </section>
+//     `;
+// })
 
 const faqs = [
     {
