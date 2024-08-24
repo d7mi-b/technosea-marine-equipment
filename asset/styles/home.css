@@ -88,6 +88,7 @@
     align-items: center;
     height: 80vh;
     padding: 0 5% 5rem;
+    margin-top: 4rem;
     overflow: hidden;
 }
 
@@ -231,6 +232,8 @@
     padding: 3rem 2rem;
     background-image: url("/asset/images/Frame\ 4.png");
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     border-radius: .5rem;
     align-items: flex-start;
@@ -272,44 +275,43 @@
 .products {
     margin: 2rem auto;
 }
-
-.products .products-container {
+.products-container {
     margin: 3rem 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
-.products .products-container .product {
-    width: 100%;
+.product {
+    /* width: 100%; */
     padding: 0;
     padding-bottom: 1.5rem;
 }
 
-.products .products-container .product header,
-.products .products-container .product p {
+.product header,
+.product p {
     padding: 0 1.5rem;
 }
 
-.products .btn-container {
+ .btn-container {
     text-align: center;
 }
 
 @media (max-width: 992px) {
-    .products .products-container {
+    .products-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 
 @media (max-width: 768px) {
-    .products .products-container {
+    .products-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 630px) {
-    .products .products-container {
+    .products-container {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -464,7 +466,29 @@
 
 .our-values .card {
     background-color: var(--main-color);
-    width: 100%;
+}
+
+.bg-as-body{
+    /* background-color: var(--bg-color); */
+    background-color:#F5F9FF;
+    border-radius: 8px;
+}
+
+.filter-container .card:hover{
+    transform: scale(1);
+}
+
+.countact-us .card.icon {
+    background-image: linear-gradient(-90deg, var(--main-color), var(--second-color));
+    height: 11rem;
+}
+
+.text-primary{
+    color: var(--main-color);
+}
+
+.success-contact{
+    height: 65vh;
 }
 
 .our-values .card:hover {
@@ -482,8 +506,11 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+<<<<<<< HEAD
+=======
 
 body > section:not(body > section.hero) {
     transform: translate(100%);
     opacity: 0;
 }
+>>>>>>> a9cd976528caf53fcdb495db88070c2b5783b7ab
