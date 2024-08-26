@@ -29,6 +29,9 @@ body {
     background-image: linear-gradient(30deg, var(--bg-color), var(--white-color), var(--main-color), var(--bg-color), var(--white-color), var(--main-color), var(--white-color));
     min-height: 100vh;
     position: relative;
+    max-width: 1480px;
+    display: grid;
+    margin: auto;
 }
 
 body::after {
